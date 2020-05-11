@@ -62,10 +62,11 @@ pipeline {
       }
     }
    stage('Email Notification'){
-      mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-      Thanks
-      DevSecOpsTeam''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'cyanideravi@gmail.com'
-
+	   steps{
+      		mail bcc: '', body: '''Hi Welcome to jenkins email alerts
+      		Thanks
+      		DevSecOpsTeam''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'cyanideravi@gmail.com'
+	   }
    }	  
   }
 }
